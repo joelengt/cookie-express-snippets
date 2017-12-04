@@ -44,6 +44,9 @@ app.get('/', function(req, res) {
 })
 
 // setting a cookie-session from the server (this data will be hashed to the client)
+// set a cookie in the client with user data session within a cookie (data hashed)
+// after seeting, the req.session, always will be getting the data user session, ready to be used (was read from the client)
+
 app.get('/home', function (req, res) {
   // Update views
   req.session.name = 'joel'
